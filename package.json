@@ -1,0 +1,23 @@
+{
+  "name": "notarai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently \"npm:client:dev\" \"npm:server:dev\"",
+    "build": "npm run client:build && npm run server:build",
+    "lint": "npm run client:lint && npm run server:lint",
+    "test": "npm run client:test && npm run server:test",
+    "client:dev": "npm --workspace client run dev",
+    "client:build": "npm --workspace client run build",
+    "client:lint": "npm --workspace client run lint",
+    "client:test": "npm --workspace client run test",
+    "server:dev": "npm --workspace server run dev",
+    "server:build": "npm --workspace server run build",
+    "server:lint": "npm --workspace server run lint",
+    "server:test": "npm --workspace server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
