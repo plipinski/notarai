@@ -18,6 +18,6 @@
     "server:test": "npm --workspace server run test"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^9.0.1"
   }
 }
